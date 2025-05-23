@@ -70,7 +70,7 @@ You can now SSH into the Raspberry Pi using the following command. The password 
 
 ```bash
 $ ssh stem@cvpi.tail9442c1.ts.net
-stem@100.103.168.105's password: vision
+stem@100.103.168.105/'s password: vision
 ```
 
 
