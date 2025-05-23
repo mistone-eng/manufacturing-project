@@ -44,11 +44,11 @@ Once accepted, you should see both your machine and `cvpi` listed in your Tailne
 Test your connection with the following commands.
 
 ```bash
-$ tailscale status
+tailscale status
 ```
 
 ```bash
-$ ping cvpi.tail9442c1.ts.net
+ping cvpi.tail9442c1.ts.net
 ```
 
 If `tailscale status` does not show `cvpi` or `cvpi` does not resolve, ensure that Tailscale is running and `cvpi` was correctly added to your Tailnet.
@@ -59,7 +59,7 @@ If `tailscale status` does not show `cvpi` or `cvpi` does not resolve, ensure th
 You can now SSH into the Raspberry Pi using the following command. The password is `vision`.
 
 ```bash
-$ ssh stem@cvpi.tail9442c1.ts.net
+ssh stem@cvpi.tail9442c1.ts.net
 ```
 
 
