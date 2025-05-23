@@ -44,11 +44,21 @@ Once accepted, you should see both your machine and `cvpi` listed in your Tailne
 Test your connection with the following commands.
 
 ```bash
-tailscale status
+$ tailscale status
+100.80.156.21   macbook-pro-5        opconnell@   macOS   -
+100.103.168.105 cvpi                 opconnell@   linux   idle, tx 1044384 rx 2709056
 ```
 
 ```bash
-ping cvpi.tail9442c1.ts.net
+$ ping cvpi.tail9442c1.ts.net
+PING cvpi.tail9442c1.ts.net (100.103.168.105): 56 data bytes
+64 bytes from 100.103.168.105: icmp_seq=0 ttl=64 time=109.060 ms
+64 bytes from 100.103.168.105: icmp_seq=1 ttl=64 time=133.103 ms
+64 bytes from 100.103.168.105: icmp_seq=2 ttl=64 time=13.539 ms
+
+--- cvpi.tail9442c1.ts.net ping statistics ---
+9 packets transmitted, 9 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 13.127/171.450/1015.312/303.293 ms
 ```
 
 If `tailscale status` does not show `cvpi` or `cvpi` does not resolve, ensure that Tailscale is running and `cvpi` was correctly added to your Tailnet.
