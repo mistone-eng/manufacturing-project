@@ -4,11 +4,13 @@ We are using [Tailscale](https://tailscale.com) to remotely access and manage th
 
 This guide walks you through how to get connected to the Pi using Tailscale.
 
+
 ## Step 1: Create a Tailscale Account
 
 Go to [login.tailscale.com](https://login.tailscale.com) and create an account.
 
 <img src="screenshot1.png" alt="screenshot1" width="250"/>
+
 
 ## Step 2: Follow the Prompts to Install Tailscale and Add Your First Device
 
@@ -18,13 +20,15 @@ Download and install Tailscale from [tailscale.com/download](https://tailscale.c
 
 Your device should appear on the screen like this once connected.
 
+
 ## Step 3: Skip the Rest of the Introduction
 
 <img src="screenshot3.png" alt="screenshot1" width="250"/>
 
 Tailscale will prompt you to add a second device. Scroll to the bottom of the page and click “Skip this introduction →”.
 
-## Step 4: Accept Invite for ('cvpi')
+
+## Step 4: Accept Invite for `cvpi`
 
 [https://login.tailscale.com/admin/invite/EVwhLLnNzaT5xVJgjgTy11](https://login.tailscale.com/admin/invite/EVwhLLnNzaT5xVJgjgTy11)
 
@@ -34,6 +38,7 @@ Navigate to the invite link and click **“Accept invite”**.
 
 Once accepted, you should see both your machine and `cvpi` listed in your Tailnet.
 
+
 ## Step 5: Test Your Connection
 
 Test your connection with the following commands.
@@ -42,39 +47,21 @@ Test your connection with the following commands.
 $ tailscale status
 ```
 
-Example Response:
-
-```bash
-100.80.156.21   macbook-pro-5        opconnell@   macOS   -
-100.103.168.105 cvpi                 opconnell@   linux   active; direct 10.2.3.191:41641, tx 497344 rx 2083840
-```
-
 ```bash
 $ ping cvpi.tail9442c1.ts.net
 ```
 
-Example Response:
+If `tailscale status` does not show `cvpi` or `cvpi` does not resolve, ensure that Tailscale is running and `cvpi` was correctly added to your Tailnet.
 
-```base
-PING cvpi.tail9442c1.ts.net (100.103.168.105): 56 data bytes
-64 bytes from 100.103.168.105: icmp_seq=0 ttl=64 time=97.125 ms
-64 bytes from 100.103.168.105: icmp_seq=1 ttl=64 time=15.275 ms
-64 bytes from 100.103.168.105: icmp_seq=2 ttl=64 time=35.927 ms
-^C
---- cvpi.tail9442c1.ts.net ping statistics ---
-10 packets transmitted, 10 packets received, 0.0% packet loss
-round-trip min/avg/max/stddev = 5.964/46.910/150.328/44.518 ms
-```
 
-If 'tailscale status' does not show 'cvpi' or 'cvpi' does not resolve, ensure that Tailscale is running and ('cvpi') was correctly added to your Tailnet.
-
-## Step 6: SSH into 'cvpi'
+## Step 6: SSH into `cvpi`
 
 You can now SSH into the Raspberry Pi using the following command. The password is ('water').
 
 ```bash
 $ ssh stem@cvpi.tail9442c1.ts.net
 ```
+
 
 ## Summary
 
@@ -83,6 +70,7 @@ $ ssh stem@cvpi.tail9442c1.ts.net
 - Make sure Tailscale is running on your device before attempting to SSH.
 - Use `ssh stem@cvpi.tail9442c1.ts.net` to access the Pi while it’s online.
 - You can use tools like VS Code Remote SSH or SCP to develop and transfer files.
+
 
 ### Special Thanks
 
