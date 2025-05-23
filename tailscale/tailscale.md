@@ -4,15 +4,11 @@ We are using [Tailscale](https://tailscale.com) to remotely access and manage th
 
 This guide walks you through how to get connected to the Pi using Tailscale.
 
----
-
 ## Step 1: Create a Tailscale Account
 
 Go to [login.tailscale.com](https://login.tailscale.com) and create an account.
 
 ![screenshot1](./screenshot1.png)
-
----
 
 ## Step 2: Follow the Prompts to Install Tailscale and Add Your First Device
 
@@ -22,15 +18,11 @@ Download and install Tailscale from [tailscale.com/download](https://tailscale.c
 
 Your device should appear on the screen like this once connected.
 
----
-
 ## Step 3: Skip the Rest of the Introduction
 
 ![screenshot3](./screenshot3.png)
 
 Tailscale will prompt you to add a second device. Scroll to the bottom of the page and click “Skip this introduction →”.
-
----
 
 ## Step 4: Accept Invite for ('cvpi')
 
@@ -41,8 +33,6 @@ Tailscale will prompt you to add a second device. Scroll to the bottom of the pa
 Navigate to the invite link and click **“Accept invite”**.
 
 Once accepted, you should see both your machine and `cvpi` listed in your Tailnet.
-
----
 
 ## Step 5: Test Your Connection
 
@@ -78,8 +68,6 @@ round-trip min/avg/max/stddev = 5.964/46.910/150.328/44.518 ms
 
 If 'tailscale status' does not show 'cvpi' or 'cvpi' does not resolve, ensure that Tailscale is running and ('cvpi') was correctly added to your Tailnet.
 
----
-
 ## Step 6: SSH into 'cvpi'
 
 You can now SSH into the Raspberry Pi using the following command. The password is ('water').
@@ -88,8 +76,6 @@ You can now SSH into the Raspberry Pi using the following command. The password 
 $ ssh stem@cvpi.tail9442c1.ts.net
 ```
 
----
-
 ## Summary
 
 - You now have secure SSH access to the I-STEM Raspberry Pi via Tailscale.
@@ -97,8 +83,6 @@ $ ssh stem@cvpi.tail9442c1.ts.net
 - Make sure Tailscale is running on your device before attempting to SSH.
 - Use `ssh stem@cvpi.tail9442c1.ts.net` to access the Pi while it’s online.
 - You can use tools like VS Code Remote SSH or SCP to develop and transfer files.
-
----
 
 ### Special Thanks
 
