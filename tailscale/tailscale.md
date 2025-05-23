@@ -10,17 +10,23 @@ Go to [login.tailscale.com](https://login.tailscale.com) and create an account.
 
 ![screenshot1](./screenshot1.png)
 
+<img src="screenshot1.png" alt="screenshot1" width="250"/>
+
 ## Step 2: Follow the Prompts to Install Tailscale and Add Your First Device
 
 Download and install Tailscale from [tailscale.com/download](https://tailscale.com/download) on the device you'll be using to access the Pi.
 
 ![screenshot2](./screenshot2.png)
 
+<img src="screenshot1.png" alt="screenshot1" width="250"/>
+
 Your device should appear on the screen like this once connected.
 
 ## Step 3: Skip the Rest of the Introduction
 
 ![screenshot3](./screenshot3.png)
+
+<img src="screenshot1.png" alt="screenshot1" width="250"/>
 
 Tailscale will prompt you to add a second device. Scroll to the bottom of the page and click “Skip this introduction →”.
 
@@ -29,6 +35,8 @@ Tailscale will prompt you to add a second device. Scroll to the bottom of the pa
 [https://login.tailscale.com/admin/invite/EVwhLLnNzaT5xVJgjgTy11](https://login.tailscale.com/admin/invite/EVwhLLnNzaT5xVJgjgTy11)
 
 ![screenshot4](./screenshot4.png)
+
+<img src="screenshot4.png" alt="screenshot4" width="250"/>
 
 Navigate to the invite link and click **“Accept invite”**.
 
