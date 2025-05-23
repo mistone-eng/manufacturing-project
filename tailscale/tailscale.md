@@ -16,14 +16,14 @@ Go to [login.tailscale.com](https://login.tailscale.com) and create an account.
 
 Download and install Tailscale from [tailscale.com/download](https://tailscale.com/download) on the device you'll be using to access the Pi.
 
-<img src="screenshot2.png" alt="screenshot1" width="250"/>
+<img src="screenshot2.png" alt="screenshot1" width="500"/>
 
 Your device should appear on the screen like this once connected.
 
 
 ## Step 3: Skip the Rest of the Introduction
 
-<img src="screenshot3.png" alt="screenshot1" width="250"/>
+<img src="screenshot3.png" alt="screenshot1" width="500"/>
 
 Tailscale will prompt you to add a second device. Scroll to the bottom of the page and click “Skip this introduction →”.
 
@@ -71,6 +71,7 @@ $ ssh stem@cvpi.tail9442c1.ts.net
 - Use `ssh stem@cvpi.tail9442c1.ts.net` to access the Pi while it’s online.
 - You can use tools like VS Code Remote SSH or SCP to develop and transfer files.
 
+Need help? Reach out to Owen.
 
 ### Special Thanks
 
