@@ -69,7 +69,8 @@ If `tailscale status` does not show `cvpi` or `cvpi` does not resolve, ensure th
 You can now SSH into the Raspberry Pi using the following command. The password is `vision`.
 
 ```bash
-ssh stem@cvpi.tail9442c1.ts.net
+$ ssh stem@cvpi.tail9442c1.ts.net
+stem@100.103.168.105's password: vision
 ```
 
 
