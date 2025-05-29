@@ -1,4 +1,4 @@
-#How to run the GoogleVoiceTest.py program:
+#How to run the GoogleVoiceTest.py program#
 
 Before beginning ensure a USB microphone is connected to the raspberry pi and ensure that the raspberry pi is connected to the internet.
 
