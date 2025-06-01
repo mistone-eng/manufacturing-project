@@ -17,7 +17,7 @@ This repository contains the code, documentation, and resources for the CURO Col
 ### Installation
 1. **Clone the repo**  
    ```bash
-   git clone https://github.com/mistone-eng/stem-manufacturing.git
+   git clone https://github.com/mistone-eng/manufacturing-project.git
    cd manufacturing-project
    
 2. **Create and activate virtual environment**
