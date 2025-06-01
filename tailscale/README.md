@@ -30,7 +30,7 @@ Tailscale will prompt you to add a second device. Scroll to the bottom of the pa
 
 ## Step 4: Accept Invite for `cvpi`
 
-[https://login.tailscale.com/admin/invite/pdaiN2yFaHN5xVJgjgTy11](https://login.tailscale.com/admin/invite/pdaiN2yFaHN5xVJgjgTy11)
+[https://login.tailscale.com/admin/invite/3ip93DPCvxg5xVJgjgTy11](https://login.tailscale.com/admin/invite/3ip93DPCvxg5xVJgjgTy11)
 
 <img src="screenshot4.png" alt="screenshot4" width="250"/>
 
