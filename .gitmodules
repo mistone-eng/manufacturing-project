@@ -1,0 +1,3 @@
+[submodule "external/pydobotplus"]
+	path = external/pydobotplus
+	url = https://github.com/mistone-eng/pydobotplus.git
