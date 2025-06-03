@@ -1,9 +1,17 @@
 import time
+import sys
 from external.pydobotplus import auto_connect_dobot
 
 # --- Connect DOBOT ---
 device = auto_connect_dobot()
-print("[INFO] Connected to DOBOT.")
+if not device:
+    print("[WARN] DOBOT not connected. Skipping conveyor test.")
+    sys.exit()
+else:
+    print("[INFO] Connected to DOBOT.")
+    device.speed(velocity=100, acceleration=100)
+    # ... your other test logic ...
+    device.close()
 
 try:
     # --- Optional: Reset/initialize state ---

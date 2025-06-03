@@ -3,7 +3,7 @@ import time
 import threading
 import math
 import speech_recognition as sr
-from pydobotplus import Dobot, auto_connect_dobot
+from external.pydobotplus import Dobot, auto_connect_dobot
 
 # --- Suppress ALSA/JACK warnings ---
 os.environ["SDL_AUDIODRIVER"] = "dummy"
