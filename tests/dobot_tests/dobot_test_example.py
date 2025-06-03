@@ -1,5 +1,5 @@
 # Import from external/pydobotplus
-from pydobotplus import Dobot, auto_connect_dobot
+from external.pydobotplus import Dobot, auto_connect_dobot
 
 def main():
     dobot = auto_connect_dobot()
