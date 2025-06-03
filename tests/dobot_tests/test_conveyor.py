@@ -1,30 +1,27 @@
-from pydobotplus import Dobot, auto_connect_dobot
+from pydobotplus import auto_connect_dobot
 import time
 
 device = auto_connect_dobot()
-print("[INFO] Connected to DOBOT. Starting conveyor test on STP2.")
+print("[INFO] Connected to DOBOT")
 
-# Set movement speed
-speed = 0.5  # Between 0.0 and 1.0
-interface = 1  # STP2
-direction = 1  # Use -1 to reverse
+# Try enabling STP2 motor at moderate speed
+print("[TEST] Running conveyor on STP2 forward for 5s")
+device.conveyor_belt(speed=0.5, direction=1, interface=0)
+time.sleep(5)
 
-# Run conveyor for 2 seconds
-device.conveyor_belt(speed=speed, direction=direction, interface=interface)
-print("[ACTION] Conveyor running...")
+# Stop it
+print("[TEST] Stopping conveyor for 2s")
+device.conveyor_belt(speed=0.0, direction=1, interface=0)
 time.sleep(2)
 
-# Stop conveyor
-device.conveyor_belt(speed=0.0, direction=direction, interface=interface)
-print("[ACTION] Conveyor stopped.")
-time.sleep(2)
+# Reverse
+print("[TEST] Running conveyor on STP2 backward for 5s")
+device.conveyor_belt(speed=0.5, direction=-1, interface=0)
+time.sleep(5)
 
-# Run again
-device.conveyor_belt(speed=speed, direction=direction, interface=interface)
-print("[ACTION] Conveyor running again...")
-time.sleep(2)
+# Stop finally
+print("[TEST] Final stop")
+device.conveyor_belt(speed=0.0, direction=1, interface=0)
 
-# Stop and disconnect
-device.conveyor_belt(speed=0.0, direction=direction, interface=interface)
 device.close()
-print("[INFO] Conveyor test complete and device closed.")
+print("[INFO] Test complete.")
