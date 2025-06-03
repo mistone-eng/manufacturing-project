@@ -1,0 +1,1 @@
+from external.pydobotplus import auto_connect_dobot
