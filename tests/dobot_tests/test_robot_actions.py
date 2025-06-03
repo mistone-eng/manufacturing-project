@@ -1,4 +1,4 @@
-from pydobotplus import Dobot, auto_connect_dobot
+from external.pydobotplus import Dobot, auto_connect_dobot
 
 
 device = auto_connect_dobot()

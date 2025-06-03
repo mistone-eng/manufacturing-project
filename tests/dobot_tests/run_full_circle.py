@@ -1,4 +1,4 @@
-from pydobotplus import Dobot, auto_connect_dobot
+from external.pydobotplus import auto_connect_dobot
 import time
 
 dobot = auto_connect_dobot()
