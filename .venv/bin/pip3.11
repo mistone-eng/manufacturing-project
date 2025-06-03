@@ -1,4 +1,4 @@
-#!/home/stem/stem-manufacturing/.venv/bin/python
+#!/home/stem/Code/manufacturing-project/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
