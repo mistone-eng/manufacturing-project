@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+.env
+.env.*
+
+# VS Code and JetBrains IDEs
+.vscode/
+.idea/
+
+# Snapshots and logs
+*.log
+snapshots/
+*.jpg
+*.png
+
+# OS/system files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+[submodule "external/pydobotplus"]
+	path = external/pydobotplus
+	url = https://github.com/mistone-eng/pydobotplus.git
+[submodule "external/hailo-rpi5-examples"]
+	path = external/hailo-rpi5-examples
+	url = https://github.com/mistone-eng/hailo-rpi5-examples
