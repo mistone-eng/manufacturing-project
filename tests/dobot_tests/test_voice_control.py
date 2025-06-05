@@ -5,6 +5,15 @@ import math
 import speech_recognition as sr
 from external.pydobotplus import Dobot, auto_connect_dobot
 
+def find_mic_index(name_keyword="TONOR"):
+    for i, name in enumerate(sr.Microphone.list_microphone_names()):
+        if name_keyword.lower() in name.lower():
+            return i
+    raise ValueError("[ERROR] Microphone not found.")
+
+mic_index = find_mic_index()
+mic = sr.Microphone(device_index=mic_index)
+
 # --- Suppress ALSA/JACK warnings ---
 os.environ["SDL_AUDIODRIVER"] = "dummy"
 os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "1"
@@ -19,7 +28,6 @@ except Exception:
 
 # --- Connect to DOBOT ---
 device = auto_connect_dobot()
-print("[INFO] DOBOT connected successfully.")
 
 device.speed(velocity=100, acceleration=100)
 print("[INFO] Speed configured.")
@@ -35,7 +43,6 @@ current_position = {
     "z": 70.0,
     "r": 0.0
 }
-
 device.move_to(**current_position, wait=True)
 
 # --- Move arm relative to internal position ---
@@ -53,7 +60,20 @@ def listen_for_commands():
     global quit_program
 
     recognizer = sr.Recognizer()
-    mic = sr.Microphone()
+
+    # --- Auto-detect TONOR microphone index ---
+    mic_index = None
+    for index, name in enumerate(sr.Microphone.list_microphone_names()):
+        print(f"Index {index}: {name}")
+        if "tonor" in name.lower():
+            mic_index = index
+            break
+
+    if mic_index is None:
+        print("[ERROR] TONOR microphone not found. Please check connection.")
+        return
+
+    mic = sr.Microphone(device_index=mic_index)
 
     with mic as source:
         recognizer.adjust_for_ambient_noise(source)
@@ -68,35 +88,26 @@ def listen_for_commands():
 
                 if "up" in command:
                     move_direction(dz=step_size)
-
                 elif "down" in command:
                     move_direction(dz=-step_size)
-
                 elif "left" in command:
                     move_direction(dy=-step_size)
-
                 elif "right" in command:
                     move_direction(dy=step_size)
-
                 elif "forward" in command:
                     move_direction(dx=step_size)
-
                 elif "backward" in command:
                     move_direction(dx=-step_size)
-
                 elif "home" in command:
                     print("[ACTION] Returning to home.")
                     device.home()
                     current_position.update({"x": 200.0, "y": 0.0, "z": 70.0, "r": 0.0})
-
                 elif "grip" in command:
                     print("[ACTION] Gripper closing.")
                     device.grip(True)
-
-                elif "release" in command:
+                elif "release" in command or "ungrip" in command:
                     print("[ACTION] Gripper opening.")
                     device.grip(False)
-
                 elif "quit" in command:
                     print("[ACTION] Shutting down. Returning home.")
                     quit_program = True

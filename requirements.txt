@@ -2,3 +2,6 @@ SpeechRecognition
 pyaudio
 pyserial
 pydobot
+numpy<2.0.0
+setproctitle
+opencv-python
