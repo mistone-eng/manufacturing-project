@@ -5,3 +5,9 @@ pydobot
 numpy<2.0.0
 setproctitle
 opencv-python
+sounddevice
+numpy
+scipy
+faster-whisper
+fuzzywuzzy
+python-Levenshtein
