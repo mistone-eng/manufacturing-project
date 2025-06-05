@@ -4,14 +4,6 @@ from external.pydobotplus import auto_connect_dobot
 
 # --- Connect DOBOT ---
 device = auto_connect_dobot()
-if not device:
-    print("[WARN] DOBOT not connected. Skipping conveyor test.")
-    sys.exit()
-else:
-    print("[INFO] Connected to DOBOT.")
-    device.speed(velocity=100, acceleration=100)
-    # ... your other test logic ...
-    device.close()
 
 try:
     # --- Optional: Reset/initialize state ---
@@ -31,12 +23,12 @@ try:
 
     # --- Run conveyor backward (STP2) ---
     print("[TEST] Running conveyor backward (STP2)...")
-    device.conveyor_belt(speed=0.5, direction=-1, interface=1)
+    device.conveyor_belt(speed=0.5, direction=-1, interface=0)
     time.sleep(5)
 
     # --- Stop ---
     print("[TEST] Stopping conveyor...")
-    device.conveyor_belt(speed=0.0, interface=1)
+    device.conveyor_belt(speed=0.0, interface=0)
 
 finally:
     device.close()
