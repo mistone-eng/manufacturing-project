@@ -13,7 +13,7 @@ try:
 
     # --- Run conveyor forward (STP2) ---
     print("\n[TEST] Running conveyor forward (STP2)...")
-    device.conveyor_belt(speed=0.5, direction=1, interface=0)
+    device.conveyor_belt(speed=1.0, direction=1, interface=0)
     time.sleep(5)
 
     # --- Stop ---
@@ -23,7 +23,7 @@ try:
 
     # --- Run conveyor backward (STP2) ---
     print("[TEST] Running conveyor backward (STP2)...")
-    device.conveyor_belt(speed=0.5, direction=-1, interface=0)
+    device.conveyor_belt(speed=1.0, direction=-1, interface=0)
     time.sleep(5)
 
     # --- Stop ---

@@ -9,7 +9,7 @@ import signal
 import sys
 
 # --- Setup ---
-MIC_INDEX = 0  # Change this to your TONOR mic index
+MIC_INDEX = 0  # Change this to your TONOR/YETI mic index
 COMMANDS = [
     "up", "down", "left", "right",
     "forward", "backward", "home",
