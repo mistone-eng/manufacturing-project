@@ -9,7 +9,7 @@ import signal
 import sys
 
 # --- Setup ---
-MIC_INDEX = 0  # Change this to your TONOR/YETI mic index
+MIC_INDEX = 1  # Change this to your TONOR/YETI mic index
 COMMANDS = [
     "up", "down", "left", "right",
     "forward", "backward", "home",
@@ -17,7 +17,7 @@ COMMANDS = [
     "quit", "exit", "stop"
 ]
 RECORD_DURATION = 2  # seconds
-SAMPLE_RATE = 16000
+SAMPLE_RATE = 44100
 
 model = WhisperModel("base.en", compute_type="auto")  # Can change to 'tiny.en' for speed
 

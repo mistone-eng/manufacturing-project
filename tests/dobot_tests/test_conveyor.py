@@ -1,35 +1,18 @@
-import time
-import sys
-from external.pydobotplus import auto_connect_dobot
+# from external.pydobotplus import Dobot, auto_connect_dobot
+# import time
 
-# --- Connect DOBOT ---
-device = auto_connect_dobot()
+# robot  = auto_connect_dobot()
+# robot._set_queued_cmd_clear()
+# robot._set_queued_cmd_start_exec()
 
-try:
-    # --- Optional: Reset/initialize state ---
-    device.speed(velocity=100, acceleration=100)
-    device.home()
-    print("[INFO] Homed and ready.")
+# print("[TEST] Starting conveyor")
+# robot.conveyor_belt(speed=0.6, direction=1, interface=0)  # Try both 0 and 1 for interface
 
-    # --- Run conveyor forward (STP2) ---
-    print("\n[TEST] Running conveyor forward (STP2)...")
-    device.conveyor_belt(speed=1.0, direction=1, interface=0)
-    time.sleep(5)
+# time.sleep(5)
 
-    # --- Stop ---
-    print("[TEST] Stopping conveyor...")
-    device.conveyor_belt(speed=0.0, interface=0)
-    time.sleep(2)
+# print("[TEST] Stopping conveyor")
+# robot.conveyor_belt(speed=0.0, direction=1, interface=0)
 
-    # --- Run conveyor backward (STP2) ---
-    print("[TEST] Running conveyor backward (STP2)...")
-    device.conveyor_belt(speed=1.0, direction=-1, interface=0)
-    time.sleep(5)
+# robot.close()
 
-    # --- Stop ---
-    print("[TEST] Stopping conveyor...")
-    device.conveyor_belt(speed=0.0, interface=0)
 
-finally:
-    device.close()
-    print("[INFO] Conveyor test complete. Device disconnected.")
