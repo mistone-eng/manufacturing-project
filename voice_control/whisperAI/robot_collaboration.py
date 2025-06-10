@@ -14,12 +14,12 @@ from external.pydobotplus import auto_connect_dobot
 
 # ---------------- CONFIGURATION ----------------
 MIC_INDEX = 1  # Adjust this to your mic index
-RECORD_DURATION = 2
+RECORD_DURATION = 2.5
 SAMPLE_RATE = 44100
 COMMANDS = [
     "up", "down", "left", "right", "forward", "backward", "home",
     "grip", "ungrip", "release",
-    "magic pick from tray", "magic assemble gearbox", "magic disassemble gearbox",
+    "magic pick from tray", "magic place on table",
     "robo assemble gear", "robo disassemble gear",
     "quit", "exit", "stop"
 ]
@@ -113,13 +113,9 @@ def dobot_pick():
     print("[ACTION] Magic picking from tray...")
     device.pickOrPlace(260, 10, 20, do_pick=True)
 
-def dobot_assemble():
-    print("[ACTION] Magic assembling gearbox...")
+def dobot_place():
+    print("[ACTION] Magic placing on table...")
     device.pickOrPlace(240, 0, 20, do_pick=False)
-
-def dobot_disassemble():
-    print("[ACTION] Magic disassembling gearbox...")
-    device.pickOrPlace(240, 0, 20, do_pick=True)
 
 # ---------------- MAIN LOOP ----------------
 if __name__ == "__main__":
@@ -171,10 +167,8 @@ if __name__ == "__main__":
                     device.grip(False)
                 elif match == "magic pick from tray":
                     dobot_pick()
-                elif match == "magic assemble gearbox":
-                    dobot_assemble()
-                elif match == "magic disassemble gearbox":
-                    dobot_disassemble()
+                elif match == "magic place on table":
+                    dobot_place()
                 elif match.startswith("robo"):
                     print(f"[ROBO] Command recognized: '{match}'.")
                     print("→ [TODO] Implement UR5e control here.")
