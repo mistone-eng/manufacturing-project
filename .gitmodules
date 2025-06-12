@@ -4,3 +4,6 @@
 [submodule "external/hailo-rpi5-examples"]
 	path = external/hailo-rpi5-examples
 	url = https://github.com/mistone-eng/hailo-rpi5-examples
+[submodule "external/ur_rtde"]
+	path = external/ur_rtde
+	url = https://gitlab.com/sdurobotics/ur_rtde.git

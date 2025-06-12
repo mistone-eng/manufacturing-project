@@ -1,0 +1,7 @@
+<map id="kAlloc" name="kAlloc">
+<area shape="rect" id="node5" href="$classk_debug_alloc.html" title="Debug memory allocator that can track allocations and report leaks. " alt="" coords="5,155,99,181"/>
+<area shape="rect" id="node7" href="$classk_heap_alloc.html" title="Allocates memory from user&#45;defined memory regions. " alt="" coords="124,155,212,181"/>
+<area shape="rect" id="node9" href="$classk_pool_alloc.html" title="Allocates small buffers from larger blocks and/or caches deallocated buffers for later reuse..." alt="" coords="237,155,320,181"/>
+<area shape="rect" id="node11" href="$classk_user_alloc.html" title="Allocates memory from a user&#45;defined memory source. " alt="" coords="345,155,431,181"/>
+<area shape="rect" id="node2" href="$classk_object.html" title="Root of all Zen classes. " alt="" coords="189,5,256,32"/>
+</map>
